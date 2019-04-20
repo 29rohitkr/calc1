@@ -10,3 +10,18 @@ crypted login system . it stores user login time ,login date, last login, logout
 it is not that much good. because, it has so much issue. and i can't figure out how to remove it so i need help .
 
 
+
+
+
+
+# HOW TO USE THIS
+
+* you must have a foxpro of any version. but, is made for use on foxpro 2.5 . its visual looks good on foxpro 2.5 .
+
+* copy all the files and paste it in the foxpro directory .
+* open foxpro 
+         in command box type do calc1
+      it will ask name type your name 
+      
+      
+     
