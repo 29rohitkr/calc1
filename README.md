@@ -22,6 +22,27 @@ it is not that much good. because, it has so much issue. and i can't figure out 
 * open foxpro 
          in command box type do calc1
       it will ask name type your name 
-      
-      
      
+![enter name](/screenshots/Screenshot%20(167).png)
+
+it will say you are not registered at first time . type y to register your self. enter your name and set a password.
+
+ ![alt text](/screenshots/Screenshot%20(169).png)
+    
+   now again run the command do calc1 and enter your user name and password. 
+   
+ ![alt text](/screenshots/Screenshot%20(170).png)
+     
+     
+ ![alt text](/screenshots/Screenshot%20(171).png)
+  
+  
+ ![alt text](/screenshots/Screenshot%20(172).png)
+    
+    
+ ![alt text](/screenshots/Screenshot%20(173).png)
+ 
+* type help to see help 
+* use clear to clear screen 
+* exit for exit
+ 
