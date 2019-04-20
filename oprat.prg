@@ -32,7 +32,7 @@ if ttime <= 60
 else
 if ttime > 60 and ttime < 3600
 tm = int(ttime/60)
-ts =  mod(ttime,60)
+ts =  int(mod(ttime,60))
 ? "you elapsed ",tm,"min",ts,"sec"
 else
 if ttime >= 3600
@@ -40,7 +40,7 @@ th = int(ttime/3600)
 ts = ttime%3600
 if ts >= 60 and ts <= 3600
 tm = int(val(ts)/60)
-ts =  mod(val(ts),60)
+ts =  int(mod(val(ts),60))
 endif
 ?"you elapsed",th,"hrs",tm,"min",ts,"sec" 
 endif
