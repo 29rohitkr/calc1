@@ -1,16 +1,23 @@
 set talk off
-exit = 0
-do while .T.
-input "enter num : " to n
-t = 0
-if n != exit
-do while n>0
-r= N%10
-t= t+r
-n = int(n/10)
-enddo
-? "sum of digit is",t
-else 
-exit
-endif
-enddo
+
+DO WHILE .T.
+    
+    INPUT "Enter num : " to n
+    sumd = 0
+    
+    IF n != 0
+        
+        DO while n > 0
+            sumd = sumd + (n%10)
+            n = int(n/10)
+        ENDDO
+        
+        ? "sum of digit is",sumd
+    
+    ELSE
+        # Exits when the user enters 0
+        EXIT
+    
+    ENDIF
+
+ENDDO
