@@ -69,13 +69,13 @@ do while .T.
         
         endif
     
-        # time calculation finished now exit
+        # time calculation finished now exiting process starts
     
         wait window "Thanks for being with us." NOWAIT
     
         repl laslogdate with date(),laslogtime with timei
     
-        #comments required for these
+ # close database.dbf and opening userdata.dbf to store user log and delete blank records and then closing all database file  before exit
         use
         use userdata
         append blank
@@ -108,7 +108,7 @@ do while .T.
         
         endcase
         
-        ?">",a
+        ?"$ ",a
     
     endif
 
@@ -116,7 +116,7 @@ do while .T.
     
         clear
         # main screen
-        ?" You are logged in as : ",DATABASE.NAME,"       at",timei," on ", date()
+        ?" You are logged in as : ",DATABASE.NAME,"          at",timei,"on", date()
         ?" "
         ?" Welcome to calc1, a prototype calculator developed in FoxPro 2.5, inspired by"
         ?" the Free Software Foundation's command line  'bc calculator'."
@@ -124,6 +124,7 @@ do while .T.
     
     endif
 
+# converter code starts 
     if x = ascii
         ?"      Converter: ASCII <--> character"
         ?" "
@@ -141,6 +142,7 @@ do while .T.
         enddo
 
     endif
+# converter code ends    
     
     if x = sd
         do sd
