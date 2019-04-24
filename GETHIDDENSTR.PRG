@@ -1,37 +1,36 @@
 set talk off
 
 * Syntax
-* getHiddenStr("<Prompt text>")
+* getHiddenStr(X, Y, "<Prompt text>")
 
 * Examples: 
-* getHiddenStr("Enter new password: ")
-* ?getHiddenStr("Re-enter password: ")
-* mypassword = getHiddenStr("Enter password: ")
+* getHiddenStr(10,10, "Enter new password: ")
+* ?getHiddenStr(40,40, "Re-enter password: ")
+* mypassword = getHiddenStr(10,12, "Enter password: ")
 
 * Illustration:
-? getHiddenStr("Enter password: ")
+? getHiddenStr(20,20, "Enter password: ")
 
 
 function getHiddenStr
 
-    PARAMETER dispStr
+    PARAMETER X, Y, dispStr
     
     CLEAR
-    
-    ? dispStr
     
     pswd  = ''
     stars = ''
     
     DO WHILE .T.
         
-        @ 10,10 CLEAR
+        @ X,Y CLEAR
         
         ch = ''
         
-        @ 10,10 SAY stars GET ch SIZE 1,1 PICT "x" RANGE [' ', '~']
+        @ X,Y SAY dispStr
+        @ X,Y+LEN(dispStr) SAY stars GET ch SIZE 1,1 PICT "x" RANGE [' ', '~']
         READ
-                
+        
         DO CASE
             case READKEY() = 271
                 pswd  = pswd + ch
@@ -40,8 +39,8 @@ function getHiddenStr
             	pswd  = pswd + ' '
             	stars = stars + '*'
             case READKEY() = 0
-                pswd  = STUFF(pswd, LEN(pswd), 1, '')
-                stars = STUFF(stars, 1, 1, '')
+                pswd  = STUFF(pswd , LEN(pswd) , 1, '')
+                stars = STUFF(stars, LEN(stars), 1, '')
             case READKEY() = 15 and LASTKEY() != 32
                 EXIT
             
