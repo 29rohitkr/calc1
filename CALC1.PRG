@@ -6,16 +6,16 @@ clear
     s=0
     z=0
 
-# storing no to variables to work in input ( numeric data type )
+# storing numbers to variables to work in input ( numeric data type )
 
     exit = 0
     store 1 to about
     clear = 2
     ascii = 3
-
-# sum of digits = sd
-
+    
+    # sum of digits = sd
     sd= 4
+    
     help = 5
     pie=22/7
     ttime=0
