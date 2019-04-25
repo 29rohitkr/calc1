@@ -41,6 +41,9 @@ function getHiddenStr
             case READKEY() = 0
                 pswd  = STUFF(pswd , LEN(pswd) , 1, '')
                 stars = STUFF(stars, LEN(stars), 1, '')
+            case READKEY() = 12 && Escape was pressed
+            	WAIT WINDOW " cancelling function " NOWAIT
+            	EXIT   
             case READKEY() = 15 and LASTKEY() != 32
                 EXIT
             
