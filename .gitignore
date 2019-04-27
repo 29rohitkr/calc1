@@ -2,3 +2,5 @@ screenshots/
 *.DBF
 *.FXP
 *.ERR
+*.BAK
+*.TMP
