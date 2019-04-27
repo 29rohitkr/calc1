@@ -1,5 +1,4 @@
-/screenshots
-/DATABASE.DBF
-/USERDATA.DBF
+screenshots/
+*.DBF
 *.FXP
 *.ERR
