@@ -75,7 +75,13 @@ do while .T.
     
         repl laslogdate with date(),laslogtime with timei
     
- # close database.dbf and opening userdata.dbf to store user log and delete blank records and then closing all database file  before exit
+        
+        * close database.dbf and opening 
+        * userdata.dbf to store user log 
+        * and delete blank records and 
+        * then closing all database file  
+        * before exit
+
         use
         use userdata
         append blank
@@ -87,8 +93,17 @@ do while .T.
         exit
         
     else
-        # calculator operators 
         
+        * calculator operators 
+        
+        * Expressions entered at the 
+        * prompt are getting evaluated
+        * by the interpreter before
+        * assignment.
+
+        * So this isn't playing any role
+        * in the operations.
+
         do case 
             
             case s = 0 + 0

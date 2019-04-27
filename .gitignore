@@ -4,3 +4,5 @@ screenshots/
 *.ERR
 *.BAK
 *.TMP
+DATABASE.DBF
+USERDATA.DBF

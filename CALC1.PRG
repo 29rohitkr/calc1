@@ -84,7 +84,7 @@ ELSE
 
                 confp = getHiddenStr(10,10, "Confirm your password : ")
                 
-                IF confp = alltrim(DATABASE.password)
+                IF LIKE(confp, newp)
                     wait window "You are registered." nowait
                     delete for name = space(20)
                     pack
@@ -115,6 +115,7 @@ ENDIF
 * Password entry routine
 * Example
 * mypassword = getHiddenStr(10,12, "Enter password: ")
+
 function getHiddenStr
 
     PARAMETER X, Y, dispStr
