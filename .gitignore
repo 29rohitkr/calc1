@@ -1,0 +1,8 @@
+screenshots/
+*.DBF
+*.FXP
+*.ERR
+*.BAK
+*.TMP
+DATABASE.DBF
+USERDATA.DBF
